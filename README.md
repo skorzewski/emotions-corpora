@@ -1,12 +1,13 @@
 # emotions-corpora
 
-Corpora for emotion analysis.
+Korpus do automatycznego rozpoznawania emocji z tekstu.
 
-You can help annotating text batches using provided script `annotate.py`:
+Możesz pomóc w towrzeniu korpusu anotując zbiór zdań za pomocą skryptu  `annotate.py`:
 ```
 ./annotate.py batch<BATCH_NO>.txt
 ```
-e.g.:
+(<BATCH_NO> może być ostatnią cyfrą Twojego numeru indeksu),
+n.p.:
 ```
 ./annotate.py batch1.txt
 ```
