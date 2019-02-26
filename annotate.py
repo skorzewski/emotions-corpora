@@ -52,6 +52,9 @@ def main(infile, outfile):
         letters = ''.join(sorted(c for c in RE_OTHER.sub('', input().upper())))
         print('{}\t{}'.format(letters, utt), file=outfile)
         print()
+    print()
+    print('Anotacje zostały zapisane w pliku: {}'.format(outfile.name))
+    print('Dziękuję!')
 
 
 if __name__ == '__main__':
