@@ -20,14 +20,14 @@ def parse_arguments():
     parser.add_argument(
         'infile',
         nargs='?',
-        type=argparse.FileType('r'),
+        type=argparse.FileType('r', encoding='utf-8'),
         default=sys.stdin,
         help='Input file with utterances',
     )
     parser.add_argument(
         'outfile',
         nargs='?',
-        type=argparse.FileType('w'),
+        type=argparse.FileType('w', encoding='utf-8'),
         default=None,
         help='Output TSV file',
     )
@@ -62,7 +62,7 @@ if __name__ == '__main__':
     if not args.outfile:
         outfile_id = random.randint(0, 10000)
         outfile_name = '{}.{:04}.tsv'.format(args.infile.name, outfile_id)
-        with open(outfile_name, 'w') as outfile:
+        with open(outfile_name, 'w', encoding='utf-8') as outfile:
             main(args.infile, outfile)
     else:
         main(args.infile, args.outfile)
